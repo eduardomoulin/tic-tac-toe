@@ -1,0 +1,92 @@
+body {
+  text-align: center;
+  background-color: rgb(248, 152, 152);
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.square:hover {
+  background-color: rgb(205, 209, 243);
+
+  box-shadow: 2px 2px 3px rgb(83, 83, 83);
+  border: 1px solid aqua;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(149, 152, 177);
+  border: 1px black solid;
+  display: inline-block;
+  border-radius: 5px;
+
+  transition: box-shadow 300ms, background-color 300ms;
+}
+
+.o {
+  position: relative;
+}
+
+.o::after {
+  position: absolute;
+  content: "\26BD";
+  font-size: 50px;
+  line-height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.x {
+  position: relative;
+}
+
+.x::after {
+  position: absolute;
+  content: "\274C";
+  font-size: 50px;
+  line-height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* O top, bottom, left, right em 0 foi colocado para podermos alinhar o escudo e as espadas dentro do nosso quadradinho, e ele foi alinhado primeiramente de acordo com o body porque o .o não tinha position relative, apos colocarmos position relative ficou alinhado corretamente da maneira como queriamos. */
+}
+
+.btnrestart {
+  background-color: indigo;
+  color: white;
+  font-size: 17px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  transition: color 800ms, background-color 800ms, border 800ms;
+}
+
+.btnrestart:hover {
+  color: rgb(94, 223, 255);
+  background-color: black;
+  border: 1px solid rgb(94, 223, 255);
+}
+
+/* .txtjogador {
+  text-align: center;
+  display: inline-block;
+  height: 25px;
+  font-size: 15px;
+} */
+
+.players {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+}
