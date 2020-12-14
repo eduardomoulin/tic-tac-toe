@@ -71,6 +71,8 @@ function restart() {
   jogador2 = "";
 
   updateSquares();
+  
+  window.location.reload(); // Faz com que a pagina seja recarregada e podemos inserir os nomes dos jogadores novamente.
 }
 
 function ganhador(playerTime) {
