@@ -66,20 +66,24 @@ h1 {
   border-radius: 25px;
   border: none;
   transition: color 800ms, background-color 800ms, border 800ms;
+  box-shadow: 2px 2px 3px black;
 }
 
 .btnrestart:hover {
-  color: rgb(94, 223, 255);
-  background-color: black;
-  border: 1px solid rgb(94, 223, 255);
+  color: black;
+  background-color: rgb(194, 194, 194);
+  border: 1px solid indigo;
 }
 
-/* .txtjogador {
+.txtjogador {
   text-align: center;
   display: inline-block;
   height: 25px;
   font-size: 15px;
-} */
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 3px black;
+}
 
 .players {
   font-weight: bolder;
