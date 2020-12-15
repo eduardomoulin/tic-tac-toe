@@ -4,18 +4,13 @@
 
 let vitorioso;
 
-let player1 = document.getElementById("p1");
-let player2 = document.getElementById("p2");
+document.getElementById("player1").addEventListener("change", nomeiaJogador);
+document.getElementById("player2").addEventListener("change", nomeiaJogador);
 
-let jogador1 = window.prompt("Jogador 1, por favor insira seu nome:");
-let jogador2 = window.prompt("Jogador 2, por favor insira seu nome:");
-
-function nomeiaPlayer() {
-  player1.innerHTML = jogador1;
-  player2.innerHTML = jogador2;
+function nomeiaJogador() {
+  jogador1 = document.getElementById("player1").value;
+  jogador2 = document.getElementById("player2").value;
 }
-
-nomeiaPlayer();
 
 document.addEventListener("DOMContentLoaded", () => {
   // Pegar todos os squares.
@@ -64,15 +59,15 @@ function restart() {
   playerTime = 0;
   gameOver = false;
 
-  player1.innerHTML = "Player1";
-  player2.innerHTML = "Player2";
+  document.getElementById("player1").value = "";
+  document.getElementById("player2").value = "";
 
   jogador1 = "";
   jogador2 = "";
 
   updateSquares();
+
   
-  window.location.reload(); // Faz com que a pagina seja recarregada e podemos inserir os nomes dos jogadores novamente.
 }
 
 function ganhador(playerTime) {
